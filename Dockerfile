@@ -14,7 +14,7 @@ COPY crossdev.conf /etc/portage/repos.conf/
 
 RUN \
 	emerge --sync && \
-	emerge bc crossdev && \
+	emerge bc crossdev dev-vcs/git && \
 	mkdir -p /var/db/repos/localrepo-crossdev/{profiles,metadata} && \
 	echo 'crossdev' > /var/db/repos/localrepo-crossdev/profiles/repo_name && \
 	echo 'masters = gentoo' > /var/db/repos/localrepo-crossdev/metadata/layout.conf && \
