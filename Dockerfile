@@ -1,4 +1,6 @@
-FROM gentoo/stage3-amd64
+FROM gentoo/portage:latest as portage
+FROM gentoo/stage3-amd64:latest as gentoo
+
 MAINTAINER Tobias Gruetzmacher "tobias-docker@23.gs"
 
 ARG BUILD_DATE
@@ -10,10 +12,11 @@ LABEL \
   org.label-schema.vcs-ref=$VCS_REF \
   org.label-schema.vcs-url="https://github.com/TobiX/mipsr5900el-toolchain"
 
+COPY --from=portage /var/db/repos/gentoo /var/db/repos/gentoo
+
 COPY crossdev.conf /etc/portage/repos.conf/
 
 RUN \
-	emerge --sync && \
 	emerge bc crossdev dev-vcs/git && \
 	mkdir -p /var/db/repos/localrepo-crossdev/{profiles,metadata} && \
 	echo 'crossdev' > /var/db/repos/localrepo-crossdev/profiles/repo_name && \
