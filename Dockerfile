@@ -17,11 +17,11 @@ COPY --from=portage /var/db/repos/gentoo /var/db/repos/gentoo
 COPY crossdev.conf /etc/portage/repos.conf/
 
 RUN \
-	emerge bc crossdev dev-vcs/git && \
 	mkdir -p /var/db/repos/localrepo-crossdev/{profiles,metadata} && \
 	echo 'crossdev' > /var/db/repos/localrepo-crossdev/profiles/repo_name && \
 	echo 'masters = gentoo' > /var/db/repos/localrepo-crossdev/metadata/layout.conf && \
 	chown -R portage:portage /var/db/repos/localrepo-crossdev && \
+	emerge bc crossdev dev-vcs/git && \
 	crossdev --stage4 --target mipsr5900el-unknown-linux-gnu
 
 ENV ARCH=mips CROSS_COMPILE=mipsr5900el-unknown-linux-gnu-
