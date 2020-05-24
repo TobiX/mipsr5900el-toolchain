@@ -22,6 +22,7 @@ RUN \
 	echo 'masters = gentoo' > /var/db/repos/localrepo-crossdev/metadata/layout.conf && \
 	chown -R portage:portage /var/db/repos/localrepo-crossdev && \
 	emerge bc crossdev dev-vcs/git && \
-	crossdev --stage4 --target mipsr5900el-unknown-linux-gnu
+	crossdev --stage4 --target mipsr5900el-unknown-linux-gnu && \
+	rm /var/cache/distfiles/*
 
 ENV ARCH=mips CROSS_COMPILE=mipsr5900el-unknown-linux-gnu-
