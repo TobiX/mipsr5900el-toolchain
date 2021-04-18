@@ -1,7 +1,7 @@
 # MIPS R5900 (PS2) Toolchain Docker Image
 
 ![License](https://img.shields.io/github/license/TobiX/mipsr5900el-toolchain)
-![Maintenance](https://img.shields.io/maintenance/yes/2020)
+![Maintenance](https://img.shields.io/maintenance/yes/2021)
 ![Docker Automated build](https://img.shields.io/docker/automated/tobix/mipsr5900el-toolchain)
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/tobix/mipsr5900el-toolchain/latest)
 
