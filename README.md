@@ -2,7 +2,7 @@
 
 ![License](https://img.shields.io/github/license/TobiX/mipsr5900el-toolchain)
 ![Maintenance](https://img.shields.io/maintenance/yes/2021)
-![Docker Automated build](https://img.shields.io/docker/automated/tobix/mipsr5900el-toolchain)
+[![Docker image](https://github.com/TobiX/mipsr5900el-toolchain/actions/workflows/deploy.yaml/badge.svg)](https://github.com/TobiX/mipsr5900el-toolchain/actions/workflows/deploy.yaml)
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/tobix/mipsr5900el-toolchain/latest)
 
 This docker image contains a precompiled `mipsr5900el-unknown-linux-gnu` for
