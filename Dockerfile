@@ -1,5 +1,5 @@
 FROM gentoo/portage:latest as portage
-FROM gentoo/stage3-amd64:latest as gentoo
+FROM gentoo/stage3:latest as gentoo
 
 MAINTAINER Tobias Gruetzmacher "tobias-docker@23.gs"
 
