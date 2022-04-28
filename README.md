@@ -1,5 +1,15 @@
 # MIPS R5900 (PS2) Toolchain Docker Image
 
+## DEPRECATED
+
+This image is now deprecated, please use
+https://github.com/frno7/mipsr5900el-gentoo-linux-gnu instead. You can directly
+pull it from GitHub's container registry:
+
+```
+docker pull ghcr.io/frno7/mipsr5900el-gentoo-linux-gnu:main
+```
+
 ![License](https://img.shields.io/github/license/TobiX/mipsr5900el-toolchain)
 ![Maintenance](https://img.shields.io/maintenance/yes/2021)
 [![Docker image](https://github.com/TobiX/mipsr5900el-toolchain/actions/workflows/deploy.yaml/badge.svg)](https://github.com/TobiX/mipsr5900el-toolchain/actions/workflows/deploy.yaml)
